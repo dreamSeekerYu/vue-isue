@@ -10,7 +10,7 @@ const app =
   createApp(App)
     .use(store)
     .use(common)
-    .use(Element3, { size: 'small', zIndex: 3000 })
+    // .use(Element3, { size: 'small', zIndex: 3000 })
     .use(router)
     .mount('#app')
 

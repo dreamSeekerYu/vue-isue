@@ -1,12 +1,8 @@
 <template>
-<el-container>
-  <el-aside width="200px">
-    <p v-for="(item,index) in componentKeys" :key="index" @click="changeComponent(item[0])"> {{item[1]}} </p>
-  </el-aside>
-  <el-container>
-    <component :is="childComponent"></component>
-  </el-container>
-</el-container>
+<div>
+  <p v-for="(item,index) in componentKeys" :key="index" @click="changeComponent(item[0])"> {{item[1]}} </p>
+  <component :is="childComponent"></component>
+</div>
 </template>
 
 <script>
