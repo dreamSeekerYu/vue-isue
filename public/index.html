@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+
+  <style>
+    :root {
+      --rule-emoji: ( :doodle {
+          @grid: 20 / 100vmax;
+          grid-gap: 1px;
+          background: #f9d654;
+          overflow: hidden;
+        }
+
+        transition: @r(1s) ease;
+        transform: scale(@rand(.1, 1)) rotate(@rand(0, 360)deg);
+
+        :after {
+          content: \@hex(@rand(0x1F600, 0x1F636));
+          /*将十六进制转换成unicode编码*/
+          opacity: @r(.1, 1);
+          font-size: 3vmax;
+        }
+      )
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
